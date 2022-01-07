@@ -453,7 +453,10 @@ Scroll to indexPath with position.
         }];
         
         // First visible cell indexPath
-        indexPath = sortedIndexPaths.firstObject;
+//        indexPath = sortedIndexPaths.firstObject;
+        
+        indexPath =  isLast ? sortedIndexPaths.lastObject : sortedIndexPaths.firstObject;
+        
         if ((self.contentOffset.y <= 0 || isLast) && (!self.zf_playingIndexPath || [indexPath compare:self.zf_playingIndexPath] == NSOrderedSame)) {
             UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
             UIView *playerView = [cell viewWithTag:self.zf_containerViewTag];

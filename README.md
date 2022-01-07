@@ -1,4 +1,21 @@
+修改点：
+1、UIScrollView+ZFPlayer中 
+_findCorrectCellWhenScrollViewDirectionVertical 方法
+    、、、、
+    else if ([self _isCollectionView]) { 
+    、、、、、
+    把indexPath = sortedIndexPaths.firstObject; 改成：
+            
+    indexPath =  isLast ? sortedIndexPaths.lastObject : sortedIndexPaths.firstObject;
+    、、、、、
 
+2、ZFPortraitControlView中
+showControlView 方法
+把
+    self.bottomToolView.zf_y         = self.zf_height - self.bottomToolView.zf_height;
+改成：
+    self.bottomToolView.zf_y         = self.zf_height - self.bottomToolView.zf_height - 25;
+--------------------------------
 <p align="center">
 <img src="https://upload-images.jianshu.io/upload_images/635942-092427e571756309.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ZFPlayer" title="ZFPlayer" width="557"/>
 </p>

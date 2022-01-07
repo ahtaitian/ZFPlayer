@@ -238,7 +238,7 @@
     self.bottomToolView.alpha        = 1;
     self.isShow                      = YES;
     self.topToolView.zf_y            = 0;
-    self.bottomToolView.zf_y         = self.zf_height - self.bottomToolView.zf_height;
+    self.bottomToolView.zf_y         = self.zf_height - self.bottomToolView.zf_height - 25;
     self.playOrPauseBtn.alpha        = 1;
     self.player.statusBarHidden      = NO;
 }
